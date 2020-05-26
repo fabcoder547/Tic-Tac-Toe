@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body {
+  height: 100vh;
+  background-color: #2c3335;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  /* height: 100vh; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mybtn {
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  animation-name: shake;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  font-size: 30px;
+  background-color: #45ce30;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+.box:hover {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+.box {
+  font-size: 25px;
+  background: #ff3e4d;
+  width: auto;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.icon {
+  font-size: 35px;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.winmsg {
+  animation-name: tada;
+  animation-duration: 1s;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.mydiv {
+  margin-bottom: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.turnmsg {
+  font-style: italic;
+  letter-spacing: 1.5px;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 25px;
 }
