@@ -14,8 +14,10 @@ const itemArray = new Array(9).fill("empty");
 const App = () => {
   const [isCross, setisCross] = useState(false);
   const [winMessage, setwinMessage] = useState("");
+  const [count, setCount] = useState(0);
 
   const reloadGame = () => {
+     setCount(0);
     setisCross(false);
     setwinMessage("");
     itemArray.fill("empty", 0, 9);
@@ -71,6 +73,9 @@ const App = () => {
     ) {
       return setwinMessage(`${itemArray[2]}`);
     }
+    else if (count == 8) {
+      return setwinMessage(`Round Tied`);
+    }
   };
 
   const changeItem = (itemNumber) => {
@@ -85,6 +90,7 @@ const App = () => {
       }
 
       setisCross(!isCross);
+      setCount(count + 1);
     } else {
       return toast("Alredy filled", { type: "error" });
     }
